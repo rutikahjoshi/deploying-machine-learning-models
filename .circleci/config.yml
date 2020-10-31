@@ -112,7 +112,7 @@ jobs:
       - run:
           name: Deploy to Heroku
           command: |
-            git push https://heroku:2f5dd708-229f-4a08-a57b-be3447b0b77f@git.heroku.com/fidelity-machine-learning-dep.git master
+            git push https://heroku:2f5dd708-229f-4a08-a57b-be3447b0b77f@git.heroku.com/fidelity-machine-learning-dep.git nand
   
   section_11_build_and_push_to_heroku_docker:
     <<: *defaults
@@ -149,7 +149,7 @@ workflows:
           filters:
             branches:
               only:
-                - master
+                - nand
       # - section_10_deploy_to_heroku:
       #     requires:
       #       - train_and_upload_regression_model
@@ -163,4 +163,4 @@ workflows:
           filters:
             branches:
               only:
-                - master
+                - nand
